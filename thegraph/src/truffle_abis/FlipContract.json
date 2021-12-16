@@ -9897,12 +9897,88 @@
         }
       },
       "links": {},
-      "address": "0xb55747958A33A99a8995e73D1e20f2f6DC842Ed7",
-      "transactionHash": "0x565832bcd971dfc5d35ad504d522768b4e92b741a2efff1ae8422909fd46bf43"
+      "address": "0xDCB3D4724200fA87542695197b36863C3c7df302",
+      "transactionHash": "0xcc97ff87e8b13a131963ebdb8d49b4d2bc4c96e64fe162acbcc2173eff68381c"
+    },
+    "1639676012610": {
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x271b3e8d94a67ce5e9cee03d78c310019308ea7075468a4eb2bac8b027b14c4d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "bet",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "bool",
+              "name": "win",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "side",
+              "type": "uint8"
+            }
+          ],
+          "name": "bet",
+          "type": "event"
+        },
+        "0xed7d0ddcc17abdb3935a0a23cd93e91b449dfeac7fd0def9f481ed5b37e18c4d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "funding",
+              "type": "uint256"
+            }
+          ],
+          "name": "funded",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5Dc1d4320C88A25a288a7De3FF553a67CC8C50bA",
+      "transactionHash": "0xf739a6450c43405016289dae33f8f2362eedfd460fa4b9fdc4bd0aeaaeb73c22"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-16T03:57:32.498Z",
+  "updatedAt": "2021-12-16T17:33:45.071Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
