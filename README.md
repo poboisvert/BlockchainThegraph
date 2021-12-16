@@ -9,6 +9,7 @@
 ### Cell Phones in Africa: Communication Lifeline vs land line
 
 - https://www.pewresearch.org/global/2015/04/15/cell-phones-in-africa-communication-lifeline/
+- https://www.cnn.com/2012/10/04/tech/mobile/africa-mobile-opinion/index.html
 
 ## ABI.json
 
