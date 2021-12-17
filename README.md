@@ -1,10 +1,12 @@
 # Thegraph & Web3 - Payments Decentralization
 
-![preview](TheGraph_logo.png)
+![preview](web.png)
 
 > This project will be an intriduction to thegraph, solidity and web3 in general
 
 ## Why this project
+
+![logo](TheGraph_logo.png)
 
 ### Cell Phones in Africa: Communication Lifeline vs land line
 
@@ -25,12 +27,6 @@
 
 - truffle migrate
 
-# Will install the lastest compiler from the config
-
-- Truffle Contract: 0xDCB3D4724200fA87542695197b36863C3c7df302
-
-- Path: src/contracts/truffle_abis/FlipContract.json
-
 ## Step 2: Setup thegraph
 
 ### Ganache CLI
@@ -41,13 +37,19 @@ Install the IDE app OR below
 
 - ganache-cli -h 0.0.0.0
 
+# Will install the lastest compiler from the config
+
+- Truffle Contract: 0x9770ACd3Dca052716619bE9809C116064fF2d227
+
+- Path: src/contracts/truffle_abis/FlipContract.json
+
 # Available Accounts
 
-(0) 0x91f1fA42d81dA4b9b2f8a55fA4A29eb9Dc389080 (100 ETH)
+(0) 0xeCE964373546E2EdC41C3dfe50e4261f160CD78E (100 ETH)
 
 # Private Keys
 
-(0) 0xe916cb358cee39f660a86f5bc867972e3127b0e35e68fbb06a66f09295b7fde7
+(0) 0x616edf5483742589ab1c7648fc823077ac13125260f1ab77d26c928fb4672eaf
 
 ### Local thegraph
 
@@ -104,6 +106,20 @@ docker run -it \
 - message
 
 > 'Hello World!'
+
+## Thegraph local
+
+- graph init --contract-name FlipContract \ --index-events --studio \ --from-contract 0xf45324e9081a70715EE9aaDFfB64379F26CB89e2
+- cd subname
+- npm run create-local
+- Clean && npm run codegen
+- npm run deploy-local
+
+## Funding Manual
+
+cd local_contract
+FlipContract = await FlipContract.deployed()
+FlipContract.fundContract({ value: 100000000000000000 });
 
 # Issues
 
