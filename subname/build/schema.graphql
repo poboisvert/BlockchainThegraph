@@ -1,0 +1,6 @@
+type ExampleEntity @entity {
+  id: ID!
+  side: Int!
+  win: Boolean!
+  bet: BigInt!
+}

@@ -19,7 +19,7 @@
 
 - https://ethereum.stackexchange.com/questions/71060/sending-the-bool-to-function-payable-in-another-contract
 
-## Step 1: Contract Compilation
+## Step 1: Contract Compilation & deploy
 
 - truffle init
 
@@ -107,7 +107,9 @@ docker run -it \
 
 > 'Hello World!'
 
-## Thegraph local
+- FlipContract.flip(0)
+
+## Step 3: Thegraph local
 
 - graph init --contract-name FlipContract \ --index-events --studio \ --from-contract 0xf45324e9081a70715EE9aaDFfB64379F26CB89e2
 - cd subname
@@ -115,11 +117,43 @@ docker run -it \
 - Clean && npm run codegen
 - npm run deploy-local
 
-## Funding Manual
+### Schema.graphql
 
-cd local_contract
-FlipContract = await FlipContract.deployed()
-FlipContract.fundContract({ value: 100000000000000000 });
+```
+type ExampleEntity @entity {
+  id: ID!
+  side: Int!
+  win: Boolean!
+  bet: BigInt!
+}
+
+```
+
+### src/mapping
+
+```
+export function handlebet(event: bet): void {
+  let entity = ExampleEntity.load(event.transaction.from.toHex());
+
+  if (entity == null) {
+    entity = new ExampleEntity(event.transaction.from.toHex());
+  }
+
+  entity.bet = event.params.bet;
+  entity.win = event.params.win;
+  entity.side = event.params.side;
+
+  entity.save();
+}
+
+export function handlefunded(event: funded): void {}
+```
+
+## Funding Manual with console
+
+- cd local_contract
+- FlipContract = await FlipContract.deployed()
+- FlipContract.fundContract({ value: 100000000000000000 });
 
 # Issues
 
