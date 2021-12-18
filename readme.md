@@ -1,6 +1,10 @@
 # Thegraph & Web3 - Payments Decentralization
 
-<img src="https://github.com/poboisvert/thegraphWeb3/raw/main/animation.gif" width="1000" height="400">
+<img src="https://github.com/poboisvert/thegraphWeb3/raw/main/animation.gif" width="800" height="300">
+
+![logo](flip_1.png)
+
+![logo](flip_2.png)
 
 ## Why this project
 
