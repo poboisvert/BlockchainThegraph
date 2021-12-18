@@ -1,7 +1,9 @@
+// SPDX-License-Identifier: MIT
+
 import "../../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "../../node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol";
 
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.10;
 
 contract FlipContract is Ownable {
     
@@ -16,17 +18,19 @@ contract FlipContract is Ownable {
     function flip(uint8 side) public payable returns(bool){
         require(address(this).balance >= msg.value.mul(2), "The contract hasn't enought funds");
         require(side == 0 || side == 1, "Incorrect side, needs to be 0 or 1");
-        bool win;
+        bool result;
         if(block.timestamp % 2 == side){
             ContractBalance -= msg.value;
             payable(msg.sender).transfer(msg.value * 2);
-            win = true;
+            result = true;
         }
         else{
             ContractBalance += msg.value;
-            win = false;
+            result = false;
         }
-        emit bet(msg.sender, msg.value, win, side);
+        emit bet(msg.sender, msg.value, result, side);
+
+        return result;
     }
     // Function to Withdraw Funds
     function withdrawAll() public onlyOwner returns(uint){

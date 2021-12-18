@@ -1,8 +1,0 @@
-
-ytype ExampleEntity @entity {
-  id: ID!
-  count: BigInt!
-  previousOwner: Bytes! # address
-  newOwner: Bytes! # address
-}
-y

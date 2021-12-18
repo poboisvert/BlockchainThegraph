@@ -1,0 +1,29 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: FlipContract
+    network: mainnet
+    source:
+      address: "0x21be520c5c73Be7F24D136d838FA9B655fd0AEbD"
+      abi: FlipContract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - OwnershipTransferred
+        - bet
+        - funded
+      abis:
+        - name: FlipContract
+          file: ./abis/FlipContract.json
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: bet(indexed address,indexed uint256,indexed bool,uint8)
+          handler: handlebet
+        - event: funded(address,uint256)
+          handler: handlefunded
+      file: ./src/mapping.ts
