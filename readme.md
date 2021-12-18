@@ -2,9 +2,11 @@
 
 <img src="https://github.com/poboisvert/thegraphWeb3/raw/main/animation.gif" width="800" height="300">
 
-![logo](flip_1.png)
+![flip_1](flip_1.png)
 
-![logo](flip_2.png)
+![flip_2](flip_2.png)
+
+![thegraph](thegraph.png)
 
 ## Why this project
 
