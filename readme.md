@@ -1,5 +1,7 @@
 # Thegraph & Web3 - Payments Decentralization
 
+Subgraph deployed: https://thegraph.com/hosted-service/subgraph/poboisvert/bhood
+
 <img src="https://github.com/poboisvert/thegraphWeb3/raw/main/animation.gif" width="800" height="300">
 
 ![flip_1](flip_1.png)
